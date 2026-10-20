@@ -1,9 +1,9 @@
 CREATE TABLE books (
-    id  INTEGER PRIMARY KEY,
-    title VARCHAR(255) NOT NULL,
-    author VARCHAR(255) NOT NULL,
-    genre VARCHAR(100) NOT NULL,
-    price DECIMAL(10, 2) NOT NULL CHECK(stock >= 0),
+    id INTEGER PRIMARY KEY,
+    title TEXT NOT NULL,
+    author TEXT NOT NULL,
+    genre TEXT NOT NULL,
+    price REAL NOT NULL CHECK(price >= 0),
     stock INTEGER NOT NULL DEFAULT(0) CHECK(stock >= 0),
-    published_year INTEGER CHECK(published_year BETWEEN 1400 AND 2100)
+    published_year INTEGER NOT NULL CHECK(published_year BETWEEN 0 AND 2100)
 );
