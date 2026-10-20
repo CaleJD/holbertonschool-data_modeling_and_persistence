@@ -1,3 +1,3 @@
 UPDATE books
-SET price = price * 1.10
+SET price = price * 0.90
 WHERE stock > 5 AND genre = 'Tech';
